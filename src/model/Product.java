@@ -1,58 +1,33 @@
 package model;
 
+import lombok.Data;
+
+@Data
 public class Product {
     private int id;
     private Category category;
-    private Product product;
+    private String product_name;
     private String description;
     private String imgUrl;
     private  double price;
 
-    public int getId() {
-        return id;
+    public Product() {
     }
 
-    public void setId(int id) {
+    public Product(int id, Category category, String product_name, String description, String imgUrl, double price) {
         this.id = id;
-    }
-
-    public Category getCategory() {
-        return category;
-    }
-
-    public void setCategory(Category category) {
         this.category = category;
-    }
-
-    public Product getProduct() {
-        return product;
-    }
-
-    public void setProduct(Product product) {
-        this.product = product;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
+        this.product_name = product_name;
         this.description = description;
-    }
-
-    public String getImgUrl() {
-        return imgUrl;
-    }
-
-    public void setImgUrl(String imgUrl) {
         this.imgUrl = imgUrl;
+        this.price = price;
     }
 
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
+    public Product(Category category, String product_name, String description, String imgUrl, double price) {
+        this.category = category;
+        this.product_name = product_name;
+        this.description = description;
+        this.imgUrl = imgUrl;
         this.price = price;
     }
 }
