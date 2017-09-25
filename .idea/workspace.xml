@@ -2,14 +2,14 @@
 <project version="4">
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/src/dao/ProductDAO.java" line="9" />
-    <bookmark url="file://$PROJECT_DIR$/src/main/Main.java" line="8" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/Main.java" line="9" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da05ccd3-c453-49eb-a4c0-413ec038b456" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dao/iml/ProductDAOIml.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/dao/iml/OrderItemDAOIml.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Main.java" afterPath="$PROJECT_DIR$/src/main/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/Product.java" afterPath="$PROJECT_DIR$/src/model/Product.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/model/OrderItem.java" afterPath="$PROJECT_DIR$/src/model/OrderItem.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,8 +27,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="55" lean-forward="false" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
+            <state relative-caret-position="250">
+              <caret line="25" column="59" lean-forward="false" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -36,36 +36,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrderDAOIml.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dao/iml/OrderDAOIml.java">
+      <file leaf-file-name="OrderItem.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/OrderItem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="102" column="13" lean-forward="true" selection-start-line="102" selection-start-column="13" selection-end-line="102" selection-end-column="13" />
+            <state relative-caret-position="289">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#161#162#0" expanded="true" />
+                <element signature="e#199#200#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProductDAOIml.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dao/iml/ProductDAOIml.java">
+      <file leaf-file-name="OrderItemDAOIml.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dao/iml/OrderItemDAOIml.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="88" column="57" lean-forward="true" selection-start-line="88" selection-start-column="57" selection-end-line="88" selection-end-column="57" />
+            <state relative-caret-position="32">
+              <caret line="43" column="44" lean-forward="false" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Product.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/Product.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="27" column="41" lean-forward="true" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -92,7 +83,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/out/production/ThaoTapHoa/model/Category.class" />
-        <option value="$PROJECT_DIR$/src/model/OrderItem.java" />
         <option value="$PROJECT_DIR$/src/dao/CustomerDAO.java" />
         <option value="$PROJECT_DIR$/src/dao/OrderDAO.java" />
         <option value="$PROJECT_DIR$/src/dao/OrderItemDAO.java" />
@@ -111,6 +101,8 @@
         <option value="$PROJECT_DIR$/src/dao/iml/OrderDAOIml.java" />
         <option value="$PROJECT_DIR$/src/model/Product.java" />
         <option value="$PROJECT_DIR$/src/dao/iml/ProductDAOIml.java" />
+        <option value="$PROJECT_DIR$/src/model/OrderItem.java" />
+        <option value="$PROJECT_DIR$/src/dao/iml/OrderItemDAOIml.java" />
         <option value="$PROJECT_DIR$/src/main/Main.java" />
       </list>
     </option>
@@ -367,12 +359,12 @@
       <workItem from="1506268814663" duration="232000" />
       <workItem from="1506269079204" duration="85000" />
       <workItem from="1506269194134" duration="3697000" />
-      <workItem from="1506273551561" duration="18956000" />
+      <workItem from="1506273551561" duration="21027000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29210000" />
+    <option name="totallyTimeSpent" value="31281000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1320" height="784" extended-state="6" />
@@ -420,16 +412,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/dao/CategoryDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="12" lean-forward="false" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/Customer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -458,16 +440,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="5" lean-forward="false" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
-          <folding>
-            <element signature="e#124#125#0" expanded="false" />
-            <element signature="e#152#153#0" expanded="false" />
-            <element signature="e#193#194#0" expanded="false" />
-            <element signature="e#227#228#0" expanded="false" />
-            <element signature="e#262#263#0" expanded="false" />
-            <element signature="e#292#293#0" expanded="false" />
-            <element signature="e#339#340#0" expanded="false" />
-            <element signature="e#377#378#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -545,16 +518,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="5" lean-forward="false" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
-          <folding>
-            <element signature="e#124#125#0" expanded="false" />
-            <element signature="e#152#153#0" expanded="false" />
-            <element signature="e#193#194#0" expanded="false" />
-            <element signature="e#227#228#0" expanded="false" />
-            <element signature="e#262#263#0" expanded="false" />
-            <element signature="e#292#293#0" expanded="false" />
-            <element signature="e#339#340#0" expanded="false" />
-            <element signature="e#377#378#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -624,16 +588,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="5" lean-forward="false" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
-          <folding>
-            <element signature="e#124#125#0" expanded="false" />
-            <element signature="e#152#153#0" expanded="false" />
-            <element signature="e#193#194#0" expanded="false" />
-            <element signature="e#227#228#0" expanded="false" />
-            <element signature="e#262#263#0" expanded="false" />
-            <element signature="e#292#293#0" expanded="false" />
-            <element signature="e#339#340#0" expanded="false" />
-            <element signature="e#377#378#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -703,16 +658,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="5" lean-forward="false" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
-          <folding>
-            <element signature="e#124#125#0" expanded="false" />
-            <element signature="e#152#153#0" expanded="false" />
-            <element signature="e#193#194#0" expanded="false" />
-            <element signature="e#227#228#0" expanded="false" />
-            <element signature="e#262#263#0" expanded="false" />
-            <element signature="e#292#293#0" expanded="false" />
-            <element signature="e#339#340#0" expanded="false" />
-            <element signature="e#377#378#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -720,23 +666,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/OrderItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding>
-            <element signature="e#124#125#0" expanded="false" />
-            <element signature="e#152#153#0" expanded="false" />
-            <element signature="e#193#194#0" expanded="false" />
-            <element signature="e#227#228#0" expanded="false" />
-            <element signature="e#262#263#0" expanded="false" />
-            <element signature="e#292#293#0" expanded="false" />
-            <element signature="e#339#340#0" expanded="false" />
-            <element signature="e#377#378#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -912,10 +841,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/OrderItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="e#161#162#0" expanded="true" />
+            <element signature="e#199#200#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dao/iml/OrderItemDAOIml.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="43" column="44" lean-forward="false" selection-start-line="43" selection-start-column="44" selection-end-line="43" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="55" lean-forward="false" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
+        <state relative-caret-position="250">
+          <caret line="25" column="59" lean-forward="false" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
