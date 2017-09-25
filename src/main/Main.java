@@ -2,17 +2,18 @@ package main;
 
 
 import dao.iml.CustomerDAOIml;
-import model.Customer;
+import dao.iml.OrderDAOIml;
+import model.Order;
 
-import java.sql.Date;
-
+import java.sql.Timestamp;
 
 public class Main {
     public static void main(String[] args) {
+        OrderDAOIml orderDAOIml = new OrderDAOIml();
         CustomerDAOIml customerDAOIml = new CustomerDAOIml();
-        Customer customer = new Customer("thao","93763", "nueg@gmail", new Date(1994,11,1));
-        System.out.println(customerDAOIml.addCustomer(customer));
-        System.out.println(customerDAOIml.getAllCustomers());
+        Timestamp timestamp = new Timestamp(2007,3,4,12,55,10, 1);
+        Order order = new Order(10, customerDAOIml.getCustomer(4), "quang nam", 12254.9, "noted", timestamp);
+        System.out.println(orderDAOIml.updateOrder(order));
 
     }
 }

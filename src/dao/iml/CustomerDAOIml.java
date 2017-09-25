@@ -45,12 +45,14 @@ public class CustomerDAOIml extends BaseDAO implements CustomerDAO {
             call = getConnection().prepareCall("{call sp_getCustomer(?)}");
             call.setInt(1, id);
             ResultSet rs = call.executeQuery();
-            customer = new Customer();
-            customer.setId(rs.getInt(1));
-            customer.setCustomer_name(rs.getString(2));
-            customer.setPhone(rs.getString(3));
-            customer.setEmail(rs.getString(4));
-            customer.setBirthday(rs.getDate(5));
+            while (rs.next()) {
+                customer = new Customer();
+                customer.setId(rs.getInt(1));
+                customer.setCustomer_name(rs.getString(2));
+                customer.setPhone(rs.getString(3));
+                customer.setEmail(rs.getString(4));
+                customer.setBirthday(rs.getDate(5));
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -61,18 +63,18 @@ public class CustomerDAOIml extends BaseDAO implements CustomerDAO {
     @Override
     public int addCustomer(Customer customer) {
         CallableStatement call;
-        int numOfAfftectedRows = 0;
+        int numOfAffectedRows = 0;
         try {
             call = getConnection().prepareCall("{call sp_addCustomer(?, ?, ?, ?)}");
             call.setString(1, customer.getCustomer_name());
             call.setString(2, customer.getPhone());
             call.setString(3, customer.getEmail());
             call.setDate(4, customer.getBirthday());
-            numOfAfftectedRows = call.executeUpdate();
+            numOfAffectedRows = call.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return numOfAfftectedRows;
+        return numOfAffectedRows;
     }
 
     @Override
@@ -80,11 +82,12 @@ public class CustomerDAOIml extends BaseDAO implements CustomerDAO {
         CallableStatement call;
         int numOfAffectedRows = 0;
         try {
-            call = getConnection().prepareCall("{call sp_updateCustomer(?, ?, ?, ?)");
-            call.setString(1, customer.getCustomer_name());
-            call.setString(2, customer.getPhone());
-            call.setString(3, customer.getEmail());
-            call.setDate(4, customer.getBirthday());
+            call = getConnection().prepareCall("{call sp_updateCustomer(?, ?, ?, ?, ?)}");
+            call.setInt(1, customer.getId());
+            call.setString(2, customer.getCustomer_name());
+            call.setString(3, customer.getPhone());
+            call.setString(4, customer.getEmail());
+            call.setDate(5, customer.getBirthday());
             numOfAffectedRows = call.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();

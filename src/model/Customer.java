@@ -21,4 +21,12 @@ public class Customer {
         this.email = email;
         this.birthday = birthday;
     }
+
+    public Customer(int id, String customer_name, String phone, String email, Date birthday) {
+        this.id = id;
+        this.customer_name = customer_name;
+        this.phone = phone;
+        this.email = email;
+        this.birthday = birthday;
+    }
 }
