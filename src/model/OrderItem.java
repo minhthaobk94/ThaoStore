@@ -1,21 +1,22 @@
 package model;
 
-import lombok.Data;
-
-@Data
 public class OrderItem {
     private Order order;
     private Product product;
 
-    public OrderItem(Product product) {
-        this.product = product;
+    public Order getOrder() {
+        return order;
     }
 
-    public OrderItem(Order order, Product product) {
+    public void setOrder(Order order) {
         this.order = order;
-        this.product = product;
     }
 
-    public OrderItem() {
+    public Product getProduct() {
+        return product;
+    }
+
+    public void setProduct(Product product) {
+        this.product = product;
     }
 }
