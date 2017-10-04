@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class OrderDAOIml extends BaseDAO implements OrderDAO {
-    @Override
+ 
     public List<Order> getAllOrders() {
         CallableStatement call;
         List<Order> orders = null;
@@ -19,7 +19,7 @@ public class OrderDAOIml extends BaseDAO implements OrderDAO {
         try {
             call = getConnection().prepareCall("{call sp_getAllOrders()}");
             ResultSet rs = call.executeQuery();
-            orders = new ArrayList<>();
+            orders = new ArrayList<Order>();
             while (rs.next()) {
                 order = new Order();
                 CustomerDAOIml customerDAOIml = new CustomerDAOIml();
@@ -37,7 +37,7 @@ public class OrderDAOIml extends BaseDAO implements OrderDAO {
         return orders;
     }
 
-    @Override
+     
     public Order getOrder(int id) {
         CallableStatement call;
         Order order = null;
@@ -62,7 +62,7 @@ public class OrderDAOIml extends BaseDAO implements OrderDAO {
         return order;
     }
 
-    @Override
+     
     public int addOrder(Order order) {
         CallableStatement call;
         int numOfAffectedRows = 0;
@@ -80,7 +80,7 @@ public class OrderDAOIml extends BaseDAO implements OrderDAO {
         return numOfAffectedRows;
     }
 
-    @Override
+     
     public int updateOrder(Order order) {
         CallableStatement call;
         int numOfAffectedRows = 0;
@@ -100,7 +100,7 @@ public class OrderDAOIml extends BaseDAO implements OrderDAO {
         return numOfAffectedRows;
     }
 
-    @Override
+     
     public int deleteOrder(Order order) {
         CallableStatement call;
         int numOfAffectedRows = 0;

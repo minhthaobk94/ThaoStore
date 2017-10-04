@@ -1,5 +1,8 @@
 package model;
 
+import lombok.Data;
+
+@Data
 public class OrderItem {
     private Order order;
     private Product product;

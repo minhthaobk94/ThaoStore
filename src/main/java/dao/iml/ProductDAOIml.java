@@ -19,7 +19,7 @@ public class ProductDAOIml extends BaseDAO implements ProductDAO {
         try {
             call = getConnection().prepareCall("{call sp_getAllProducts()}");
             ResultSet rs = call.executeQuery();
-            products = new ArrayList<>();
+            products = new ArrayList<Product>();
             while (rs.next()) {
                 CategoryDAOIml categoryDAOIml = new CategoryDAOIml();
                 product = new Product();

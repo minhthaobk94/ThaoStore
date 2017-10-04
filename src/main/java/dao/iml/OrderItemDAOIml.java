@@ -19,7 +19,7 @@ public class OrderItemDAOIml extends BaseDAO implements OrderItemDAO {
         try {
             call = getConnection().prepareCall("{call sp_getAllOrderItems()}");
             ResultSet rs = call.executeQuery();
-            orderItems = new ArrayList<>();
+            orderItems = new ArrayList<OrderItem>();
             while (rs.next()) {
                 orderItem = new OrderItem();
                 orderItem.setOrder(new OrderDAOIml().getOrder(rs.getInt(1)));

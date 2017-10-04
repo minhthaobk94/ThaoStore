@@ -20,7 +20,7 @@ public class CustomerDAOIml extends BaseDAO implements CustomerDAO {
         try {
             call = getConnection().prepareCall("{call sp_getAllCustomers()}");
             ResultSet rs = call.executeQuery();
-            customers = new ArrayList<>();
+            customers = new ArrayList<Customer>();
             while (rs.next()) {
                 customer = new Customer();
                 customer.setId(rs.getInt(1));

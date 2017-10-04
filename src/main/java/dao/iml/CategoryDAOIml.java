@@ -21,7 +21,7 @@ public class CategoryDAOIml extends BaseDAO implements CategoryDAO {
         try {
             call = getConnection().prepareCall("{call sp_getAllCategories()}");
             ResultSet rs = call.executeQuery();
-            categories = new ArrayList<>();
+            categories = new ArrayList<Category>();
             while (rs.next()) {
                 category = new Category();
                 category.setId(rs.getInt(1));
