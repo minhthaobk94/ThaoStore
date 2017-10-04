@@ -1,6 +1,3 @@
-package main;
-
-
 import dao.iml.CategoryDAOIml;
 import dao.iml.ProductDAOIml;
 import model.Product;
