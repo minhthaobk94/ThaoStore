@@ -1,36 +1,93 @@
 package utils;
 
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.OutputStream;
+import java.io.InputStream;
 import java.util.Properties;
 
-public class Config {
-    void getConfiguration() {
-        Properties properties = new Properties();
-        OutputStream out = null;
-        try {
-            out = new FileOutputStream("config.properties");
-            properties.setProperty("datasource.driver-class-name", "com.mysql.jdbc.Driver");
-            properties.setProperty("datasource.url", "jdbc:mysql://localhost/thaotodo?user=root&password=123456");
-            properties.setProperty("datasource.username", "root");
-            properties.setProperty("datasource.password", "123456");
+public class ConfigUtils {
+    InputStream in = null;
+    Properties properties = new Properties();
 
-            properties.store(out, "null");
+    public String getDataSourceUrl() {
+        String dataSourceUrl = "";
+        try {
+            in = getClass().getClassLoader().getResourceAsStream("config.properties");
+            properties.load(in);
+            dataSourceUrl = properties.getProperty("datasource.url");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
-            if (out != null) {
-                try {
-                    out.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
+            try {
+                if (in != null) {
+                    in.close();
                 }
+            } catch (IOException e) {
+                e.printStackTrace();
             }
         }
+        return dataSourceUrl;
     }
-    
+
+    public String getDriverClassName() {
+        String driverClassName = "";
+        in = getClass().getClassLoader().getResourceAsStream("config.properties");
+        try {
+            properties.load(in);
+            driverClassName = properties.getProperty("datasource.driver-class-name");
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (in != null) {
+                    in.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return driverClassName;
+    }
+
+    private String getUsername() {
+        String userName = "";
+        in = getClass().getClassLoader().getResourceAsStream("config.properties");
+        try {
+            properties.load(in);
+            userName = properties.getProperty("datasource.username");
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (in != null) {
+                    in.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return userName;
+    }
+
+    private String getPassword() {
+        String userName = "";
+        in = getClass().getClassLoader().getResourceAsStream("config.properties");
+        try {
+            properties.load(in);
+            userName = properties.getProperty("datasource.password");
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (in != null) {
+                    in.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return userName;
+    }
 }

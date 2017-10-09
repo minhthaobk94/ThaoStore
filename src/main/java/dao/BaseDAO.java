@@ -1,11 +1,14 @@
 package dao;
 
+import utils.ConfigUtils;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public abstract class BaseDAO implements DataSource {
     private Connection connection;
+    ConfigUtils configUtils = new ConfigUtils();
 
     public BaseDAO() {
         connection = this.connect();
@@ -14,8 +17,8 @@ public abstract class BaseDAO implements DataSource {
     private Connection connect() {
         Connection connection = null;
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://localhost/thaotaphoadb?user=root&password=123456");
+            Class.forName(configUtils.getDriverClassName());
+            connection = DriverManager.getConnection(configUtils.getDataSourceUrl());
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (SQLException e) {
@@ -39,4 +42,5 @@ public abstract class BaseDAO implements DataSource {
             }
         }
     }
+
 }
